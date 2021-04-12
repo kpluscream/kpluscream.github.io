@@ -1,0 +1,653 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v4.1.1">
+    <title>Dashboard</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/album/">
+
+    <!-- Bootstrap core CSS -->
+    <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        .row>.column {
+            padding: 0 8px;
+        }
+
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* Create four equal columns that floats next to eachother */
+        .column {
+            float: left;
+            width: 33.3%;
+        }
+
+        /* The Modal (background) */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            padding-top: 100px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: black;
+        }
+
+        /* Modal Content */
+        .modal-content {
+            position: relative;
+            margin: auto;
+            padding: 0;
+            width: 45%;
+        }
+
+        /* The Close Button */
+        .close {
+            color: white;
+            position: absolute;
+            top: 10px;
+            right: 25px;
+            font-size: 35px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #999;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        /* Hide the slides by default */
+        .mySlides {
+            display: none;
+        }
+
+        /* Number text (1/3 etc) */
+        .numbertext {
+            color: #f2f2f2;
+            font-size: 12px;
+            padding: 8px 12px;
+            position: absolute;
+            top: 0;
+        }
+
+        /* Caption text */
+        .caption-container {
+            text-align: center;
+            background-color: black;
+            padding: 2px 16px;
+            color: white;
+        }
+
+        img.demo {
+            opacity: 0.6;
+        }
+
+        .active,
+        .demo:hover {
+            opacity: 1;
+        }
+
+        img.hover-shadow {
+            transition: 0.3s;
+        }
+
+        .hover-shadow:hover {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        li {
+            display: table-cell;
+            width: 20%;
+            padding-right: 1px;
+            height: auto;
+            vertical-align: bottom;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="album.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <main role="main">
+        <section class="jumbotron text-center"
+            style="background-image: url('./Background/federal.jpg'); background-size: cover;">
+            <div class="container" style="background-color: white; border-radius: 2%;">
+                <br>
+                <img src="./Partners Logo/Fedpack Logo.jpg" alt="Marquip" width="15%" height="10%">
+                <br>
+                <br>
+                <p class="lead text-muted">Country/ Region: Singapore<br>Established: 1975<br>Products: Corrugated
+                    Boxes</p>
+                <p>
+                <div class="btn-group">
+                    <a href="index.html" class="btn btn-primary my-2">Home</a>
+                    <a href="https://www.fedpack.sg/" class="btn btn-secondary my-2">Website</a>
+                </div>
+                </p>
+                <br>
+            </div>
+        </section>
+
+        <div class="container">
+            <br>
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" id="about-tab" data-toggle="tab" href="#about" role="tab"
+                        aria-controls="about" aria-selected="true">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab"
+                        aria-controls="profile" aria-selected="false">Products</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="machines-tab" data-toggle="tab" href="#machines" role="tab"
+                        aria-controls="machines" aria-selected="false">Machines</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="qa-tab" data-toggle="tab" href="#qa" role="tab" aria-controls="qa"
+                        aria-selected="false">Quality Assurance</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="pc-tab" data-toggle="tab" href="#pc" role="tab" aria-controls="pc"
+                        aria-selected="false">Pest Management</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="solution-tab" data-toggle="tab" href="#solution" role="tab"
+                        aria-controls="solution" aria-selected="false">Solutions</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab"
+                        aria-controls="contact" aria-selected="false">Contribution</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="contacts-tab" data-toggle="tab" href="#contacts" role="tab"
+                        aria-controls="contacts" aria-selected="false">Contacts</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="goals-tab" data-toggle="tab" href="#goals" role="tab" aria-controls="goals"
+                        aria-selected="false">Video</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="atlas-tab" data-toggle="tab" href="#atlas" role="tab" aria-controls="atlas"
+                        aria-selected="false">Atlas Paper</a>
+                </li>
+            </ul>
+            <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="about" role="tabpanel" aria-labelledby="about-tab">
+                    <br>
+                    <div class="row featurette">
+                        <div class="col-md-7">
+                            <h2 class="featurette-heading">Federal Packaging Pte Ltd</h2>
+                            <p class="lead"> Incepted in 1975, Federal Packaging has established
+                                itself as a reliable packaging solution provider to our
+                                partners armed with 45 years of corrugated carton
+                                experience
+                                <br>
+                                In 2010, Acquired another full pledge corrugator
+                                Atlas Paper Products Pte Ltd. Atlas incepted 1977.
+                        </div>
+                        <div class="col-md-5">
+                            <img src="./Pictures/fedpack group photo.jpg" alt="Fuji Robotics" width="100%"
+                                height="auto">
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                    <br>
+                    <p>
+                        Products:
+                        <br>
+                        - We manufacture corrugated boxes, offset boxes and display stands.
+                        <br>
+                        - We also provide other packaging materials as a one stop solution.
+                        <br>
+                    </p>
+                    <div class="row">
+                        <div class="column">
+                            <img class="hover-shadow" onclick="openModal();currentSlide(1)"
+                                src="./Pictures/fedpack products.jpg" width="50%" height="auto">
+                        </div>
+                        <div class="column">
+                            <img class="hover-shadow" onclick="openModal();currentSlide(2)"
+                                src="./Pictures/fedpack product 2.emf.jpg" width="50%" height="auto">
+                        </div>
+                        <div class="column">
+                            <img class="hover-shadow" onclick="openModal();currentSlide(3)"
+                                src="./Pictures/fedpack product 3jpg.jpg" width="50%" height="auto">
+                        </div>
+                        <div class="column">
+                            <img class="hover-shadow" onclick="openModal();currentSlide(4)"
+                                src="./Pictures/fedpack product 4. jpg.jpg" width="50%" height="auto">
+                        </div>
+                        <div class="column">
+                            <img class="hover-shadow" onclick="openModal();currentSlide(5)"
+                                src="./Pictures/fedpack product 5.jpg" width="50%" height="auto">
+                        </div>
+
+                        <div id="myModal" class="modal">
+                            <span class="close cursor" onclick="closeModal()">&times;</span>
+                            <div class="modal-content">
+
+                                <div class="mySlides">
+                                    <div class="numbertext">1 / 5</div>
+                                    <img src="./Pictures/fedpack products.jpg" style="width:100%">
+                                </div>
+
+                                <div class="mySlides">
+                                    <div class="numbertext">2 / 5</div>
+                                    <img src="./Pictures/fedpack product 2.emf.jpg" style="width:100%">
+                                </div>
+
+                                <div class="mySlides">
+                                    <div class="numbertext">3 / 5</div>
+                                    <img src="./Pictures/fedpack product 3jpg.jpg" style="width:100%">
+                                </div>
+
+                                <div class="mySlides">
+                                    <div class="numbertext">4 / 5</div>
+                                    <img src="./Pictures/fedpack product 4. jpg.jpg" style="width:100%">
+                                </div>
+
+                                <div class="mySlides">
+                                    <div class="numbertext">5 / 5</div>
+                                    <img src="./Pictures/fedpack product 5.jpg" style="width:100%">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <script>
+                        // Open the Modal
+                        function openModal() {
+                            document.getElementById("myModal").style.display = "block";
+                        }
+
+                        // Close the Modal
+                        function closeModal() {
+                            document.getElementById("myModal").style.display = "none";
+                        }
+
+                        var slideIndex = 1;
+                        showSlides(slideIndex);
+
+                        function currentSlide(n) {
+                            showSlides(slideIndex = n);
+                        }
+
+                        function showSlides(n) {
+                            var i;
+                            var slides = document.getElementsByClassName("mySlides");
+                            var dots = document.getElementsByClassName("demo");
+                            var captionText = document.getElementById("caption");
+                            if (n > slides.length) { slideIndex = 1 }
+                            if (n < 1) { slideIndex = slides.length }
+                            for (i = 0; i < slides.length; i++) {
+                                slides[i].style.display = "none";
+                            }
+                            for (i = 0; i < dots.length; i++) {
+                                dots[i].className = dots[i].className.replace(" active", "");
+                            }
+                            slides[slideIndex - 1].style.display = "block";
+                            dots[slideIndex - 1].className += " active";
+                            captionText.innerHTML = dots[slideIndex - 1].alt;
+                        }
+
+                    </script>
+
+                </div>
+
+                <div class="tab-pane fade" id="machines" role="tabpanel" aria-labelledby="machines-tab">
+                    <br>
+                    <p>
+                        Machines:
+
+                        <br>
+                        Marquip Cool Vac System
+                        <br>
+                        Why Marquip: Latest Unique Technology
+                        – Coolvac System.
+                        <br>
+                        - 2500mm Board Width
+                        <br>
+                        - 5,000 to 6,000 tons per month.
+                        <br>
+                        <img src="./Pictures/coolvac.jpg" width="50%" height="auto">
+                        <br>
+                        <br>
+                        Board Cooling Fan
+                        <br>
+                        Board Cooling Fan:
+                        Further control boards flatness.
+
+                        18 Fans.
+                        Blow for 60 Sec.
+
+                        <br>
+                        Before
+                        %RH = 80%
+                        Temp = 50 °C
+
+                        After
+
+                        %RH = 35-40%
+                        Temp = 38-40 °C
+
+                        <br>
+                        <img src="./Pictures/boardcoolingfan.jpg" width="50%" height="auto">
+                        <br>
+                        <br>
+                        Asahi Carton Master AP - Die Cut
+                        <br>
+                        <img src="./Pictures/Asahi.jpg" width="50%" height="auto">
+                        <br>
+                        <br>
+                        Shinko 4 - Print Machine
+                        <br>
+                        <img src="./Pictures/shinko4.jpg" width="50%" height="auto">
+                        <br>
+                        <br>
+                        Shinko 3 - Print Machine
+                        <br>
+                        <img src="./Pictures/shinko3.jpg" width="50%" height="auto">
+                        <br>
+                        <br>
+                        Ichikawa 4 - Color Print & Rotary Die-Cut
+                        <br>
+                        <img src="./Pictures/ichikawa4.png" width="50%" height="auto">
+                        <br>
+                        <br>
+                        Ward Machine - Rotary Die Cutter
+                        <br>
+                        <img src="./Pictures/ward.png" width="50%" height="auto">
+                        <br>
+                        <br>
+                        Robotic Palletizing System - EC 201
+                        <br>
+                        <img src="./Pictures/ec201.jpg" width="50%" height="auto">
+                        <br>
+                        <br>
+                        Omni Yoshida - 2 Way Auto Lift
+                        <br>
+                        <img src="./Pictures/lift1.png" width="50%" height="auto">
+                        <img src="./Pictures/lift2.jpg" width="50%" height="auto">
+                        <br>
+                        <br>
+                        Enclosed Store Design Racking & Shutter
+                        <br>
+                        Store Concept
+                        <br>
+                        Finished Goods on Rack
+                        Arrange by Delivery Day.
+                        <br>
+                        E.g.
+                        Rack A
+                        for Monday
+                        Rack B
+                        for Tuesday
+                        Etc.…….
+                        <br>
+                        <img src="./Pictures/racking.png" width="50%" height="auto">
+                        <br>
+                        <br>
+                        Plotter Zun
+                        <br>
+                        <img src="./Pictures/zun1.jpg" width="50%" height="auto">
+                        <img src="./Pictures/zun2.jpg" width="50%" height="auto">
+                        <br>
+                    </p>
+                </div>
+
+                <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                    <br>
+                    <div class="row featurette">
+                        <div class="col-md-7 order-md-1">
+                            <h2 class="featurette-heading">Contribution</h2>
+                            <p class="lead">
+                                SCORE<br>
+                                - Employment & Contract Work <br>
+                                Educational / Industrial Attachment <br>
+                                - Schools
+                            </p>
+                        </div>
+                        <div class="col-md-5 order-md-1">
+                            <img src="./Pictures/fedpack contribution 1.jpg" width="50%" height="auto">
+                            <img src="./Pictures/fedpack contribution 2.jpg.png" width="50%" height="auto">
+                        </div>
+                    </div>
+
+                    <div class="row featurette">
+                        <div class="col-md-7 order-md-1">
+                            <h2 class="featurette-heading">Contribution</h2>
+                            <p class="lead">
+                                Industrial Learning Scope<br>
+                                - Manufacturing Safety<br>
+                                - Quality Assurance<br>
+                                - Production Planning<br>
+                                - Purchasing<br>
+                                - R&D Design Prototype<br>
+                            </p>
+                        </div>
+                        <div class="col-md-5 order-md-2">
+                            <img src="./Pictures/fedpack contribution 3.png" width="50%" height="auto">
+                            <img src="./Pictures/fedpack contribution 4.png" width="50%" height="auto">
+                        </div>
+                    </div>
+
+                    <!-- <div class="row featurette">
+                        <div class="col-md-7">
+                            <h2 class="featurette-heading">Contribution</h2>
+
+                            
+                            <p class="lead">
+                            <p>
+                                SCORE<br>
+                                - Employment & Contract Work <br>
+                                Educational / Industrial Attachment <br>
+                                - Schools
+                            </p>
+                            <img src="./Pictures/fedpack contribution 1.jpg" width="50%" height="auto">
+                            <img src="./Pictures/fedpack contribution 2.jpg.png" width="50%" height="auto">
+                            <p>
+                                Industrial Learning Scope<br>
+                                - Manufacturing Safety<br>
+                                - Quality Assurance<br>
+                                - Production Planning<br>
+                                - Purchasing<br>
+                                - R&D Design Prototype<br>
+                            </p>
+                            <img src="./Pictures/fedpack contribution 3.png" width="50%" height="auto">
+                            <img src="./Pictures/fedpack contribution 4.png" width="50%" height="auto">
+                            </p>
+                        </div>
+                    </div> -->
+                </div>
+                <div class="tab-pane fade" id="qa" role="tabpanel" aria-labelledby="qa-tab">
+                    <br>
+                    <div class="row featurette">
+                        <div class="col-md-7">
+                            <h2 class="featurette-heading">Quality Assurance - In-House Testing Equipments
+                            </h2>
+                            <p class="lead">
+                            <p>
+                                Incoming Paper Roll Test 测试原料
+                                <br>
+                                Bursting Test
+                                <br>
+                                Ring Crush Test
+                                <br>
+                                Gramage Test
+                                <br>
+                                Thickness Test
+                                <br>
+                                Tensile Test
+                                <br>
+                                <br>
+                                In-Process Test 进行中的测试
+                                <br>
+                                Bursting
+                                <br>
+                                Edge Crush Test
+                                <br>
+                                <br>
+                                Completed Carton Test 盒子测试
+                                <br>
+                                Box Compression Test
+                                <br>
+                            </p>
+                            <img src="./Pictures/QA.png" width="50%" height="auto">
+                            <img src="./Pictures/QA2.png" width="50%" height="auto">
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-pane fade" id="pc" role="tabpanel" aria-labelledby="pc-tab">
+                    <div style="align-items: center;">
+                        <h2 class="featurette-heading">Integrated Pest Management Program</h2>
+                        <p>
+                            Integrated Pest Management (IPM)
+                            <br>
+                            General Pest Control<br>
+                            Rodent, Cockroach, Ant, Mosquito & Termites<br><br>
+
+                            Store Pest Control<br>
+                            Strategic Placement of Pheromone Traps / Stations<br>
+                            (Lure & Trap insects in the vicinity)<br>
+                            Deployment of insect control measures.<br>
+                            Store Insects - Wood borers, Beetles, Moths etc….<br><br>
+
+                            Control of Pest Survival Elements<br>
+
+                            Enhance In-house Control<br>
+                            @ No Food & Drinks Policy - GMP <br>
+                            (Good Manufacturing Practice).<br>
+                            @ Designated Waste Bins:<br>
+                            Food Waste<br>
+                            <img src="./Pictures/food bin.png" width="50%" height="auto">
+                            <br>
+                            General Waste<br>
+                            <img src="./Pictures/waste bin.png" width="50%" height="auto">
+                            <br>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="tab-pane fade" id="solution" role="tabpanel" aria-labelledby="solution-tab">
+                    <div style="align-items: center;">
+                        <h2 class="featurette-heading">One Stop Solution</h2>
+                        <p>
+                            Packaging Materials:
+                            <br><br>
+                            Adhesive Packaging Tape<br>
+                            Barcode Ribbon & Labels<br>
+                            Bubble Wrap<br>
+                            Desiccants<br>
+                            Edge Protector<br>
+                            Compress Pallets<br>
+                            Plastic Pallets<br>
+                            Heat Treated Pallets<br>
+                            Anti Static Foam<br>
+                            Anti Static Bubble Wrap<br>
+                            Packing List<br>
+                            <br>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="tab-pane fade" id="contacts" role="tabpanel" aria-labelledby="contacts-tab">
+                    <br>
+                    <div>
+                        <p>
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15955.033599301536!2d103.6759777!3d1.3207096!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x6e1552815f0c7e25!2sFederal%20Packaging%20Industries%20Pte%20Ltd!5e0!3m2!1sen!2ssg!4v1600048316335!5m2!1sen!2ssg"
+                                width="50%" height="auto" frameborder="0" style="border:0;" allowfullscreen=""
+                                aria-hidden="false" tabindex="0"></iframe>
+                            <br>
+                            K+Cream/ Federal Packaging Pte Ltd
+                            <br>
+                            153A Gul Circle Singapore 629636
+                            <br>
+                            TEL:+65 6862 3939
+                            <br>
+                            FAX:+65 6861 7863
+                            <br><br>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="tab-pane fade" id="goals" role="tabpanel" aria-labelledby="goals-tab">
+                    <div style="align-items: center;">
+                        <br>
+                        <h2 class="featurette-heading">Introduction Video</h2>
+                        <video width="640" height="440" controls>
+                            <source src="./Video/Federal Intro Video.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+
+                <div class="tab-pane fade" id="atlas" role="tabpanel" aria-labelledby="atlas-tab">
+                    <div style="align-items: center;">
+                        <p>
+                            <br>
+                        <h3>Atlas Paper Product Pte Ltd</h3>
+                        <br>
+                        In 2010, Acquired another full pledge corrugator Atlas Paper Products Pte Ltd.<br> Atlas
+                        incepted 1977.
+                        <br>
+                        </p>
+                        <img src="./Partners Logo/atlas.png" alt="Atlas" width="40%" height="auto">
+                        <img src="./Pictures/atlas factory.PNG" width="50%" height="auto">
+                        <br>
+                    </div>
+                </div>
+            </div> <!-- /.container -->
+            <br>
+    </main>
+
+    <footer class="text-muted">
+        <div class="container">
+            <p class="float-right">
+                <a href="#">Back to top</a>
+            </p>
+            <p>&copy; 2020 K+Cream Pte Ltd</p>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+        </script>
+    <script>
+        window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')
+    </script>
+    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+
+</html>
