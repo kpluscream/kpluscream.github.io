@@ -1,0 +1,84 @@
+/* main jumbotron */
+.jumbotron {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    margin-bottom: 0;
+    background-color: #fff;
+  }
+  
+  @media (min-width: 768px) {
+    .jumbotron {
+      padding-top: 6rem;
+      padding-bottom: 6rem;
+    }
+  }
+  
+  .jumbotron p:last-child {
+    margin-bottom: 0;
+  }
+  
+  .jumbotron h1 {
+    font-weight: 300;
+  }
+  
+  .jumbotron .container {
+    max-width: 40rem;
+  }
+  
+  /* Tab List */
+  li {
+    display: table-cell;
+    width: 25%;
+    padding-right: 1px;
+    height: auto;
+    vertical-align: bottom;
+  }
+  
+  /* Footer Spacing */
+  footer {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+  
+  footer p {
+    margin-bottom: .25rem;
+  }
+  
+  /* Partner Box Sizing */
+  .boxHeight {
+    position: relative;
+    margin: auto;
+    height: 90%;
+  }
+  
+  /* Image Body */
+  .image-body {
+    height: 40%;
+    text-align: center;
+  }
+  
+  /* Card Body */
+  .card-body {
+    height: 30%;
+  }
+  
+  /* Image Center */
+  .img-center {
+    position: relative;
+    vertical-align: middle;
+  }
+
+  @media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+      font-size: 3.5rem;
+    }
+  }
+
+  .bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
