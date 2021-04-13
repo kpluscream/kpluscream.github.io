@@ -18,20 +18,20 @@
             <img src="./images/icons/K+Cream.png" alt="K+Cream" width="40%" height="10%">
             <p class="lead text-muted">Our Branding Platform<br>用好的品牌，打出一个用心的平台 </p>
             <br>
-            <form action="https://kpluscream.github.io/kpluscream.html">
-                <div class="container">
-                    <label for="uname"><b>Username: </b></label>
-                    <input type="text" placeholder="Enter Username" name="uname" required>
-                    <br>
-                    <label for="psw"><b>Password: </b></label>
-                    <input type="password" placeholder="Enter Password" name="psw" required>
-                    <br>
-                    <br>
-                    <button class="btn btn-sm btn-outline-secondary" type="submit">Login</button>
-                    <br>
-                    <br>
-                </div>
-            </form>
+            <!-- <form action="https://kpluscream.github.io/kpluscream.html"> -->
+            <div class="container">
+                <label for="uname"><b>Username: </b></label>
+                <input type="text" placeholder="Enter Username" name="uname" required>
+                <br>
+                <label for="psw"><b>Password: </b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
+                <br>
+                <br>
+                <button onclick="kcream()" class="btn btn-sm btn-outline-secondary" type="submit">Login</button>
+                <br>
+                <br>
+            </div>
+            <!-- </form> -->
         </div>
     </section>
 </body>
@@ -44,6 +44,12 @@
         <p>&copy; 2020 K+Cream Pte Ltd</p>
     </div>
 </footer>
+
+<script>
+    function kcream() {
+        window.location.href = "https://kpluscream.github.io/kpluscream.html";
+    }
+</script>
 
 
 </html>
