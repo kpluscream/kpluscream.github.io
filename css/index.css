@@ -62,9 +62,8 @@ footer p {
 /* Image Body */
 
 .image-body {
-    position: relative;
-    text-align: center;
     height: 40%;
+    text-align: center;
 }
 
 
@@ -78,12 +77,8 @@ footer p {
 /* Image Center */
 
 .img-center {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    /* position: relative;
-    vertical-align: middle; */
+    position: relative;
+    vertical-align: middle;
 }
 
 @media (min-width: 768px) {
